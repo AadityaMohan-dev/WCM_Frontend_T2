@@ -1,0 +1,37 @@
+#sect1 {
+    background-image: linear-gradient(to right, #F9E7FF, #DAFCFC);
+    min-height: 100vh;
+    
+}
+
+#card{
+    margin-left: 8%;
+    margin-top: 8%;
+}
+
+#input-box{
+    margin-top:2%;
+}
+
+#dat{
+    margin-top: 2%;
+    justify-content: baseline;
+}
+#check-box{
+
+    margin-top: 1%;
+    margin-left: -3%;
+}
+
+#ssr-drop{
+    margin-top: 2%;
+}
+
+#pro-btn{
+    margin-top:3%;
+    max-width: 50%;
+    margin-left: 1%;
+    justify-content: center;
+    margin-bottom: 4%;
+    
+}
