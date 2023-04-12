@@ -7,8 +7,8 @@ import { LoginComponent } from './auth/LogIn/login/login.component';
 import { StaffComponent } from './dashboard/staff/staff.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { ProfileComponent } from './dashboard/staff/profile/profile/profile.component';
-import { PassengerComponent } from './dashboard/Passenger/passenger/passenger.component';
-import { PaymentComponent } from './dashboard/passenger/payment/payment.component';
+import { PassengerComponent } from './dashboard/Passenger/ticket_booking/passenger.component';
+import { PaymentComponent } from './dashboard/Passenger/payment/payment.component';
 import { StationComponent } from './dashboard/station/station/station.component';
 import { RouterModule } from '@angular/router';
 import{HttpClientModule} from '@angular/common/http'
