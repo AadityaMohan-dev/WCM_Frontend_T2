@@ -6,25 +6,55 @@
     <div class="row" style="margin-left: 3%; margin-top: 2%;"><h2>STAFF DASHBOARD</h2></div>
     <div class="row" style="margin-left: 3%;margin-top: 3%;">
       <div class="col-md-5"><div class="card">
+        
+        <!-- Assigned Task  table-->
         <div class="card-header">
           Assigned Task
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Staff Code</th>
+              <th scope="col">Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let s of staff">
+              <td scope="col">{{s.id}}</td>
+              <td scope="col">{{s.name}}</td>
+              <td scope="col">{{s.satffcode}}</td>
+              <td scope="col">{{s.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+
       </div></div>
       <div class="col-md-5"style="margin-left: 3%;">
         <div class="card" >
         <div class="card-header">
           Completed Task
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Staff Code</th>
+              <th scope="col">Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let s of staff">
+              <td scope="col">{{s.id}}</td>
+              <td scope="col">{{s.name}}</td>
+              <td scope="col">{{s.satffcode}}</td>
+              <td scope="col">{{s.status}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div></div>
     </div>
     <div class="row col-md-10"style="margin-left: 4%;margin-top: 3%;">
@@ -32,11 +62,24 @@
         <div class="card-header">
           Details
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Staff Code</th>
+              <th scope="col">Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let s of staff">
+              <td scope="col">{{s.id}}</td>
+              <td scope="col">{{s.name}}</td>
+              <td scope="col">{{s.satffcode}}</td>
+              <td scope="col">{{s.status}}</td>
+            </tr>
+          </tbody>
+        </table>
         </div>
     </div>
   </div>

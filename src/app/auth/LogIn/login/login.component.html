@@ -1,25 +1,42 @@
 <div id="sect1" class="container-fluid">
-  <div class="card" style="width: 40%">
-    <div class="card-body">
-      <div class="row mb-3">
-        <h2>SignIn</h2>
-      </div>
-      <form>
-        <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-          <div class="row mb-3">
-            <input type="email" class="form-control" id="input">
-          </div>
+    <div class="card col-lg-7" style="width: 40%">
+        <div class="card-body">
+            <div class="row mb-3">
+                <h2>SignIn</h2>
+            </div>
+
+            <form [formGroup]="loginForm" (submit)="loginUser()">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <!-- add validation for email -->
+
+                    <div class="alert alert-danger mb-3" role="alert"
+                        *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid">
+                        <span *ngIf="loginForm.controls['email'].errors ?.['required']">Email is required</span>
+                        <span *ngIf="loginForm.controls['email'].errors ?.['email']">Enter valid Email</span>
+                    </div>
+
+
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+
+                    <!-- Password validaton -->
+                    <div class="alert alert-danger mb-3" role="alert"
+                        *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid">
+                        <span *ngIf="loginForm.controls['password'].errors ?.['required']">password is required</span>
+                        <span *ngIf="loginForm.controls['password'].errors ?.['minlength']">Password should be atleast 4
+                            chars</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
         </div>
-        <div class="row mb-3">
-          <label for="inputPassword3">Password</label>
-          <div class="row mb-3">
-            <input type="password" class="form-control" id="input">
-          </div>
-        </div>
-        <div class="mb-3"><button type="submit" class="btn btn-primary">Sign in</button></div>
-        <div class="mb-3" id="forget-msg"><a id="forgot-pass" routerLink="/forgot-pass">Forgot Password ?</a></div>
-      </form>
+
     </div>
-  </div>
 </div>

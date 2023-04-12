@@ -11,6 +11,8 @@ import { PassengerComponent } from './dashboard/Passenger/passenger/passenger.co
 import { PaymentComponent } from './dashboard/passenger/payment/payment.component';
 import { StationComponent } from './dashboard/station/station/station.component';
 import { RouterModule } from '@angular/router';
+import{HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,11 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
