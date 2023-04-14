@@ -13,6 +13,7 @@ import { StationComponent } from './dashboard/station/station/station.component'
 import { RouterModule } from '@angular/router';
 import{HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AirlineComponent } from './dashboard/airline/airline.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PassengerComponent,
     PaymentComponent,
     StationComponent,
-    ProfileComponent
+    ProfileComponent,
+    AirlineComponent
   ],
   imports: [
     RouterModule,
