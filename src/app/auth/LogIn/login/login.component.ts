@@ -24,15 +24,15 @@ export class LoginComponent implements OnInit {
 
   loginUser() {
     let userInfo: User = {
-      email: this.loginForm.value.email,
+      username: this.loginForm.value.email,
       password: this.loginForm.value.password
     };
-    let token = btoa(userInfo.email + ':' + userInfo.password);
+    let token = window.btoa(userInfo.username + ':' + userInfo.password);
     this.userService.login(userInfo, token).subscribe({
       next: (data) => {
         localStorage.setItem('token', token),
           localStorage.setItem('role', data.role),
-          localStorage.setItem('email', data.email);
+          localStorage.setItem('email', data.username);
 
         switch (data.role) {
           case "STAFF":

@@ -33,7 +33,10 @@
                             chars</span>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="mb-3 col-lg-12">
+                    <button class="btn btn-primary col-lg-12"
+                    [disabled]="!loginForm.valid">LogIn</button>
+                  </div>
             </form>
 
         </div>

@@ -10,9 +10,11 @@ export class UserService {
 
   constructor(private http : HttpClient) { }
 
-  public login(userInfo : User, token : string) : Observable<any>{
-    let header = {'Autharization' : 'Basic' + token};
-    return  this.http.get<User>('',{headers : header})
+  public login(userInfo : User, token : string) : Observable<User>{
+    console.log(token)
+    let header = {'Authorization' : 'Basic ' + token};
+    console.log(header)
+    return this.http.get<User>('http://localhost:8786/api/user/login',{headers : header})
   }
 
 }
