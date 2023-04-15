@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-passenger',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./passenger.component.css']
 })
 export class PassengerComponent {
+
 
 }
