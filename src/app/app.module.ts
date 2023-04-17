@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,12 @@ import { RouterModule } from '@angular/router';
 import{HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AirlineComponent } from './dashboard/airline/airline.component';
+import { ThanksComponent } from './dashboard/passanger/Thankyou/thanks/thanks.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +33,9 @@ import { AirlineComponent } from './dashboard/airline/airline.component';
     PaymentComponent,
     StationComponent,
     ProfileComponent,
-    AirlineComponent
+    AirlineComponent,
+    ThanksComponent,
+
   ],
   imports: [
     RouterModule,
@@ -34,7 +43,10 @@ import { AirlineComponent } from './dashboard/airline/airline.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    CommonModule
 
   ],
   providers: [],
