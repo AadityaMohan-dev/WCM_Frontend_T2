@@ -37,10 +37,12 @@ export class LoginComponent implements OnInit {
 
         switch (data.role) {
           case "STAFF":
+            this.toastr.success("Login Successful");
             this.router.navigateByUrl("/staff")
             break;
 
           case "STATION":
+            this.toastr.success("Login Successful");
             this.router.navigateByUrl("/station")
             break;
 
@@ -50,6 +52,7 @@ export class LoginComponent implements OnInit {
             break;
 
           case "PASSENGER":
+            this.toastr.success("Login Successful");
             this.router.navigateByUrl("/passenger")
             break;
 

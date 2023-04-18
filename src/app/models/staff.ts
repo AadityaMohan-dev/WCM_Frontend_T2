@@ -3,4 +3,7 @@ export class Staff {
     name ? : string;
     staffCode ? : string;
     status ? : string;
+    username ? : string;
+    contact ? : string;
+    email ? : string;
 }
