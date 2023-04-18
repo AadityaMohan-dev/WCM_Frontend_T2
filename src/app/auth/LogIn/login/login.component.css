@@ -8,9 +8,15 @@
     padding-top: 10%;
 }
 
+
+.card {
+	
+}
 .card {
     margin: auto;
-    box-shadow: 10px 10px 5px lightblue;
+    box-shadow: 0 0 5px 0 ;
+	background: inherit;
+	backdrop-filter: blur(10px);
 }
 
 h2 {

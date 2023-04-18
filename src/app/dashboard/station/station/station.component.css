@@ -1,6 +1,15 @@
 #sect1 {
     background-image: linear-gradient(to right, #F9E7FF, #DAFCFC);
     min-height: 100vh;
+    
 }
 
- 
+.card {
+	box-shadow: 0 0 5px 0 ;
+	background: inherit;
+	backdrop-filter: blur(10px);
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}

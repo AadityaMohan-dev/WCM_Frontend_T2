@@ -2,87 +2,105 @@
 <div class="row"id="sect1" >
 
   <div class="col-md-3 mt-4"><app-profile style="position: relative;"></app-profile></div>
-  <div class="col-md-9">
-    <div class="row" style="margin-left: 3%; margin-top: 2%;"><h2>STAFF DASHBOARD</h2></div>
-    <div class="row" style="margin-left: 3%;margin-top: 3%;">
-      <div class="col-md-5"><div class="card">
-        
-        <!-- Assigned Task  table-->
-        <div class="card-header">
-          Assigned Task
-        </div>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Staff Code</th>
-              <th scope="col">Availability</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let s of staff">
-              <td scope="col">{{s.id}}</td>
-              <td scope="col">{{s.name}}</td>
-              <td scope="col">{{s.satffcode}}</td>
-              <td scope="col">{{s.status}}</td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="col">
+    <div class="row" style="margin-left: 3%; margin-top: 2%;">
+      <h1>STAFF DASHBOARD</h1>
+  <div class="row mt-3">
 
-
-      </div></div>
-      <div class="col-md-5"style="margin-left: 3%;">
-        <div class="card" >
-        <div class="card-header">
-          Completed Task
-        </div>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Staff Code</th>
-              <th scope="col">Availability</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let s of staff">
-              <td scope="col">{{s.id}}</td>
-              <td scope="col">{{s.name}}</td>
-              <td scope="col">{{s.satffcode}}</td>
-              <td scope="col">{{s.status}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div></div>
+    <div class="col-md-5">
+      <div class="card card-body" style="justify-content: center;">
+        <!-- Assigned task -->
+        <div class="row">
+          <h4>Assigned Task</h4>
+          <table class="table table-striped">
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                  
+              </table>
+            </table>
+      </div>
+           
+      </div>
     </div>
-    <div class="row col-md-10"style="margin-left: 4%;margin-top: 3%;">
-      <div class="card">
-        <div class="card-header">
-          Details
-        </div>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Staff Code</th>
-              <th scope="col">Availability</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let s of staff">
-              <td scope="col">{{s.id}}</td>
-              <td scope="col">{{s.name}}</td>
-              <td scope="col">{{s.satffcode}}</td>
-              <td scope="col">{{s.status}}</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
+
+    <div class="col-md-5">
+      <div class="card card-body" style="justify-content: center;">
+        <!-- Completed task -->
+        <div class="row">
+          <h4>Completed Task</h4>
+          <table class="table table-striped">
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                  
+              </table>
+            </table>
+      </div>
+        
+      </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-10 mt-5">
+      <div class="card card-body" style="justify-content: center;">
+        <!-- Details -->
+        <div class="row">
+          <h4>Details</h4>
+          <table class="table table-striped">
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                  
+              </table>
+            </table>
+      </div>
+           
+      </div>
+    </div>
+  </div>
+    
 </div>
-
-
