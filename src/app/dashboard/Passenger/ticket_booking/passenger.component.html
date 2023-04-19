@@ -1,164 +1,56 @@
-<div class="row"><app-navbar style="position: sticky;"></app-navbar></div>
 <div class="row" id="sect1">
-    <div id="card" class="col-md-10">
-        <div class="card text-center">
-            <div class="card-header">
-                <ul class="nav nav-pills card-header-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-            </div>
+    <div class="row">
+        <div class="col-md-7 ">
+            <h1>Welcome to AirX Airlines</h1>
+            <h2>The New Era</h2>
+            <h5>Wings of Change</h5>
+            <!-- background image -->
+            <img [src]="ticktImg"/>
+        </div>
 
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col">
+        <div class="col-md-5">
+            <div class="card mt-5" style="width: 22rem;">
+                <div class="card-body">
+                  <!-- Ticket Booking -->
+                  <h4>Ticket Booking</h4>
 
-                    <div class="card-body">
-                        <div class="row " id="check-box">
-                            <div class="col-5" id="check-box">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">One Way</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Round Trip</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="inlineRadio3" value="option3">
-                                    <label class="form-check-label" for="inlineRadio3">Multi City</label>
-                                </div>
-                            </div>
-                        </div>
+                  <form>
+                    <div class="mb-3 mt-4">
+                      <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="Form">
                     </div>
-
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="row" id="input-box">
-                                <div class="col-md-5">
-                                    <input type="text" class="form-control" placeholder="From" aria-label="From"
-                                        id="input-from">
-                                </div>
-                                <div class="col-md-5">
-                                    <input type="text" class="form-control" placeholder="To" aria-label="To"
-                                        id="input-to">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="To">
                     </div>
-
-
-                    <div class="row col" id="dat">
-                        <div class="col-md-2">
-                            <input type="date" class="form-control" placeholder="Departing" value="Departing"
-                                aria-label="Departing" id="input-Departing">
-                        </div>
-                        <div class="col-md-2 mx-5">
-                            <input type="date" class="form-control" placeholder="Returning" aria-label="Returning"
-                                id="input-Returning">
-                        </div>
-
-                        <div class="col-md-1" id="drop-1">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" style="width: fit-content;">
-                                Adult
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">1</a></li>
-                                <li><a class="dropdown-item" href="#">2</a></li>
-                                <li><a class="dropdown-item" href="#">3</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-1" id="drop-1">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" style="width: fit-content;">
-                                Childern
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">1</a></li>
-                                <li><a class="dropdown-item" href="#">2</a></li>
-                                <li><a class="dropdown-item" href="#">3</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-1 mx-4" id="drop-1">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" style="width: fit-content; margin-left: 1%;">
-                                Infant
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">1</a></li>
-                                <li><a class="dropdown-item" href="#">2</a></li>
-                                <li><a class="dropdown-item" href="#">3</a></li>
-                            </ul>
-                        </div>
-
-
-
-
+                    <div class="mb-3">
+                        <input type="text"onfocus="(this.type='date')"id="date"  class="form-control date-picker hasDatepick" id="exampleInputText" aria-describedby="textHelp" placeholder="Start">
                     </div>
-
-                    <div class="row col-md-8" id="dat">
-                        <div class="col-md-3 ">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Concessionary Type
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 mx-5">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Economy
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Economy</a></li>
-                                <li><a class="dropdown-item" href="#">Premium Economy</a></li>
-                                <li><a class="dropdown-item" href="#">Bussiness</a></li>
-                                <li><a class="dropdown-item" href="#">First</a></li>
-                            </ul>
-                        </div>
+                    <div class="mb-3">
+                        <input type="text"onfocus="(this.type='date')"id="date"  class="form-control date-picker hasDatepick" id="exampleInputText" aria-describedby="textHelp" placeholder="Return">
                     </div>
-
-                    <div class="row col-md-8">
-                        <div class="col-md-3" id="ssr-drop">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Special Service Request
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Wheel Chair</a></li>
-                                    <li><a class="dropdown-item" href="#">Special Food</a></li>
-                                    <li><a class="dropdown-item" href="#">Prostitute</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
+                    <div class="mb-3">
+                        <!-- Flight Type -->
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Economy</option>
+                            <option value="1">Premium Economy</option>
+                            <option value="2">Business</option>
+                            <option value="3">First</option>
+                          </select>
                     </div>
-
-                    <div class="row">
-                        <button type="button" class="btn btn-outline-primary" id="pro-btn" routerLink="/payment">Proceed</button>
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected disabled>Special Service Request</option>
+                            <option value="1">Wheel Chair</option>
+                            <option value="2" disabled>Special Food</option>
+                            <option value="3" disabled>Other</option>
+                          </select>
                     </div>
+                    
+                    <button type="submit" class="btn">Submit</button>
+                  </form>
+
+                  
                 </div>
-            </div>
-
-
-
+              </div>
         </div>
     </div>
 </div>

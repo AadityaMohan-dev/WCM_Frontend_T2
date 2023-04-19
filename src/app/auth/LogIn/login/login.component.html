@@ -6,7 +6,7 @@
             <img [src]="bgImage"/>
         </div>
         
-        <div class="card col-md-4" style="margin-left: 7%;">
+        <div class="card col-md-4" style="margin-left: 7%; width: 22rem; float: right;">
             <div class="card-body">
                 <div class="row mb-3">
                     <h2>SignIn</h2>
@@ -40,10 +40,7 @@
                                 chars</span>
                         </div>
                     </div>
-                    <div class="mb-3 col-lg-12">
-                        <button class="btn btn-primary col-lg-12 mt-3"
-                        [disabled]="!loginForm.valid">LogIn</button>
-                      </div>
+                    <button type="submit" class="btn" [disabled]="!loginForm.valid">LogIn</button>
                 </form>
     
             </div>

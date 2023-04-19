@@ -11,7 +11,7 @@ export class ProfileComponent implements OnInit{
 
   staff: Staff;
 
-  profileImg = "../assets/rmxkvbdtrp5v0rcosrev.png"
+  profileImg = "../assets/rmxkvbdtrp5v0rcosrev.png";
 
   constructor(private staffService: StaffService) {
 

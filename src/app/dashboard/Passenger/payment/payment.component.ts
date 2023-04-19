@@ -12,6 +12,8 @@ export class PaymentComponent implements OnInit{
   loginForm: FormGroup;
   msg: string;
 
+  bgImg = "../assets/paymentImg.png"
+
   constructor( private router: Router, private toastr: ToastrService) { }
   ngOnInit(): void {
     this.loginForm = new FormGroup({

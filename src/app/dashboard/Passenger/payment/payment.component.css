@@ -3,10 +3,39 @@
     min-height: 100vh;   
 }
 
-#pay-body{
-    justify-content: center;
+.btn {
+    margin: auto;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #24c5a1;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-#card{
-    margin: auto;
+.card {
+	box-shadow: 0 0 5px 0 ;
+	background: inherit;
+	backdrop-filter: blur(10px);
+    width: 30rem;
+    margin-bottom: 3%;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img{
+    margin-top: 10%;
+    margin-left: 15%;
+    height: 500px;
+    width: auto;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
 }

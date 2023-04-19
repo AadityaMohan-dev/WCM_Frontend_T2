@@ -1,103 +1,114 @@
-<div class="row"><app-navbar style="position: sticky;"></app-navbar></div>
-
 <div class="row" id="sect1">
-    <div id="card" class="col-md-8">
-        <div class="card">
-            <div class="card-header">
-               <h1>Payment</h1> 
-            </div>
-            <div class="card-body">
-                <div class="row" id="pay-body"></div>
-
-                <div class="tab-content">
-                    <!-- credit card info-->
-                    <div id="credit-card" class="tab-pane fade show active pt-3">
-                        <form  [formGroup]="loginForm">
-
-                            <div class="form-group"> <label for="username">
+    <div class="col-md-6">
+        <div class="bg_img">
+            <img [src]="bgImg"/>
+        </div>
+        
+    </div>
+    
+        <div class="card col-md-4 mt-3">
+            <div class="tab-content">
+                <h1>Payment</h1>
+                <!-- credit card info-->
+                <div id="credit-card" class="tab-pane fade show active pt-3">
+                    <form [formGroup]="loginForm">
+        
+                        <div class="form-group"> <label for="username">
                                 <h6>Name</h6>
-                            </label> <input type="text" formControlName="name" name="username" placeholder="Passenger Name" required
-                                class="form-control "> 
-                            
-                                <!-- name validation -->
-                                <div class="alert alert-danger mb-3" role="alert"
+                            </label> <input type="text" formControlName="name" name="username" placeholder="Passenger Name"
+                                required class="form-control ">
+        
+                            <!-- name validation -->
+                            <div class="alert alert-danger mb-3" role="alert"
                                 *ngIf="loginForm.controls['name'].touched && loginForm.controls['name'].invalid">
                                 <span *ngIf="loginForm.controls['name'].errors ?.['required']">Name is required</span>
                             </div>
-                            </div>
-                            
-                            <div class="form-group"> <label for="username">
+                        </div>
+        
+                        <div class="form-group"> <label for="username">
                                 <h6>Email</h6>
                             </label> <input type="email" formControlName="email" name="email" placeholder="Owner email" required
                                 class="form-control ">
-                            
-                                <!-- email validation -->
-                                <div class="alert alert-danger mb-3" role="alert"
+        
+                            <!-- email validation -->
+                            <div class="alert alert-danger mb-3" role="alert"
                                 *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid">
                                 <span *ngIf="loginForm.controls['email'].errors ?.['required']">Email is required</span>
                                 <span *ngIf="loginForm.controls['email'].errors ?.['email']">Enter valid Email</span>
                             </div>
-                            
+        
+                        </div>
+        
+                        <div class="form-group"> <label for="username">
+                                <h6>Phone</h6>
+                            </label> <input type="tel" name="Phone" placeholder="Owner Phone" class="form-control "
+                                formControlName="Phone">
+        
+                            <div class="alert alert-danger mb-3" role="alert"
+                                *ngIf="loginForm.controls['Phone'].touched && loginForm.controls['Phone'].invalid">
+                                <span *ngIf="loginForm.controls['Phone'].errors ?.['required']">Phone number is required</span>
+                                <span *ngIf="loginForm.controls['Phone'].errors ?.['pattern']">Enter valid Phone Number</span>
                             </div>
-
-                                <div class="form-group"> <label for="username">
-                                    <h6>Phone</h6>
-                                </label> <input type="tel" name="Phone" placeholder="Owner Phone" class="form-control " formControlName="Phone">
-
-                                    <div class="alert alert-danger mb-3" role="alert"
-                                    *ngIf="loginForm.controls['Phone'].touched && loginForm.controls['Phone'].invalid">
-                                    <span *ngIf="loginForm.controls['Phone'].errors ?.['required']">Phone number is required</span>
-                                    <span *ngIf="loginForm.controls['Phone'].errors ?.['pattern']">Enter valid Phone Number</span>
-                                    </div>
-                                
-                                </div>
-
-
-                            <div class="form-group"> <label for="username">
-                                    <h6>Card Owner</h6>
-                                </label> <input type="text" name="username" placeholder="Card Owner Name" required
-                                    class="form-control " formControlName="cardOwnerName">
-                                     <!-- card owner name Validation -->
-                                    
-                                    <div class="alert alert-danger mb-3" role="alert"
-                                    *ngIf="loginForm.controls['cardOwnerName'].touched && loginForm.controls['cardOwnerName'].invalid">
-                                    <span *ngIf="loginForm.controls['cardOwnerName'].errors ?.['required']">Card owner name is required</span>
-                                    </div>
-
-                                 </div>
-                            <div class="form-group"> <label for="cardNumber">
-                                    <h6>Card number</h6>
-                                </label>
-                                <div class="input-group"> <input type="text" name="cardNumber"
-                                        placeholder="Valid card number" class="form-control " required >
-                                
-                                        <div class="alert alert-danger mb-3" role="alert"
-                                        *ngIf="loginForm.controls['cardNumber'].touched && loginForm.controls['cardNumber'].invalid">
-                                        <span *ngIf="loginForm.controls['cardNumber'].errors ?.['required']">Card number is required</span>
-                                        <span *ngIf="loginForm.controls['cardNumber'].errors ?.['pattern']">Enter valid Card Number</span>
-                                        </div>
-
-                                    </div>
+        
+                        </div>
+        
+        
+                        <div class="form-group"> <label for="username">
+                                <h6>Card Owner</h6>
+                            </label> <input type="text" name="username" placeholder="Card Owner Name" required
+                                class="form-control " formControlName="cardOwnerName">
+                            <!-- card owner name Validation -->
+        
+                            <div class="alert alert-danger mb-3" role="alert"
+                                *ngIf="loginForm.controls['cardOwnerName'].touched && loginForm.controls['cardOwnerName'].invalid">
+                                <span *ngIf="loginForm.controls['cardOwnerName'].errors ?.['required']">Card owner name is
+                                    required</span>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div class="form-group"> <label><span class="hidden-xs">
-                                                <h6>Expiration Date</h6>
-                                            </span></label>
-                                        <div class="input-group"> <input type="number" placeholder="MM" name=""
-                                                class="form-control" required> <input type="number" placeholder="YY"
-                                                name="" class="form-control" required> </div>
-                                    </div>
+        
+                        </div>
+                        <div class="form-group"> <label for="cardNumber">
+                                <h6>Card number</h6>
+                            </label>
+                            <div class="input-group"> <input type="text" name="cardNumber" placeholder="Valid card number"
+                                    class="form-control " required>
+        
+                                <div class="alert alert-danger mb-3" role="alert"
+                                    *ngIf="loginForm.controls['cardNumber'].touched && loginForm.controls['cardNumber'].invalid">
+                                    <span *ngIf="loginForm.controls['cardNumber'].errors ?.['required']">Card number is
+                                        required</span>
+                                    <span *ngIf="loginForm.controls['cardNumber'].errors ?.['pattern']">Enter valid Card
+                                        Number</span>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="form-group mb-4"> <label data-toggle="tooltip"
-                                            title="Three digit CV code on the back of your card">
-                                            <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
-                                        </label> <input type="text" required class="form-control"> </div>
+        
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="form-group"> <label><span class="hidden-xs">
+                                            <h6>Expiration Date</h6>
+                                        </span></label>
+                                    <div class="input-group"> <input type="number" placeholder="MM" name="" class="form-control"
+                                            required> <input type="number" placeholder="YY" name="" class="form-control"
+                                            required> </div>
                                 </div>
                             </div>
-                            <div><h2>Rs.6,999</h2></div>
-                            <div class="card-footer"> <button type="button" 
-                                    class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment </button>
+                            <div class="col-sm-4">
+                                <div class="form-group mb-4"> <label data-toggle="tooltip"
+                                        title="Three digit CV code on the back of your card">
+                                        <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                    </label> <input type="text" required class="form-control"> </div>
                             </div>
-                            
+                        </div>
+                        <div>
+                            <h2>Rs.6,999</h2>
+                        </div>
+                        <div class="btn">Confirm Payment</div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
