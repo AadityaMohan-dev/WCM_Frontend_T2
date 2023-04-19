@@ -5,15 +5,13 @@
 #sect1 {
     background-image: linear-gradient(to right, #F9E7FF, #DAFCFC);
     min-height: 100vh;
-    padding-top: 10%;
 }
 
 
+
 .card {
-	
-}
-.card {
-    margin: auto;
+    float: right;
+    margin-right: 5%;
     box-shadow: 0 0 5px 0 ;
 	background: inherit;
 	backdrop-filter: blur(10px);
@@ -39,4 +37,9 @@ a {
     color: rgb(0, 102, 255);
     text-decoration: none;
     font-size: medium;
+}
+
+h1{
+    margin-left: 4%;
+    font-family: 'Times New Roman', Times, serif;
 }

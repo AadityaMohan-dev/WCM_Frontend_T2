@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   msg: string;
 
+  bgImage = "../assets/shipping-firm-banner.png"
+
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
   ngOnInit(): void {
     this.loginForm = new FormGroup({
