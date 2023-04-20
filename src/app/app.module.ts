@@ -15,10 +15,11 @@ import { RouterModule } from '@angular/router';
 import{HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AirlineComponent } from './dashboard/airline/airline.component';
-import { ThanksComponent } from './dashboard/passanger/Thankyou/thanks/thanks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+import { AirprofileComponent } from './dashboard/airline/airline_profile/airprofile/airprofile.component';
+import { StnprofileComponent } from './dashboard/station/station_profile/stnprofile/stnprofile.component';
 
 
 
@@ -34,7 +35,8 @@ import { ToastrModule } from 'ngx-toastr';
     StationComponent,
     ProfileComponent,
     AirlineComponent,
-    ThanksComponent,
+    AirprofileComponent,
+    StnprofileComponent,
 
   ],
   imports: [

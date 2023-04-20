@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 import { Staff } from 'src/app/models/staff';
 import { StaffService } from 'src/app/service/staff.service';
 
@@ -13,7 +14,7 @@ export class ProfileComponent implements OnInit{
 
   profileImg = "../assets/rmxkvbdtrp5v0rcosrev.png";
 
-  constructor(private staffService: StaffService) {
+  constructor(private staffService: StaffService,private router : Router) {
 
   }
 
@@ -26,8 +27,12 @@ export class ProfileComponent implements OnInit{
       error : (err) => {
         console.log(err);
       }
-    })
+    });
   }
 
+  OnLogout(){
+    localStorage.clear();
+    this.router.navigate(['/login']);
+    }
+  }
 
-}
