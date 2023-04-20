@@ -17,17 +17,23 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Staff Code</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Username</th>
+                      <th scope="col">Contact</th>
+                      <th scope="col">Email</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                    <tr *ngFor="let staff of staffs; let i = index">
+                      <th scope="row">{{i+1}}</th>
+                      <td>{{staff.name}}</td>
+                      <td>{{staff.staffCode}}</td>
+                      <td>{{staff.status}}</td>
+                      <td>{{staff.user.username}}</td>
+                      <td>{{staff.contact}}</td>
+                      <td>{{staff.email}}</td>
                     </tr>
                   </tbody>
 
@@ -49,17 +55,16 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
+                      <th scope="col">Wheelchair code</th>
+                      <th scope="col">Wheelchair Status</th>
+                  
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                    <tr *ngFor="let w of wcs; let i = index">
+                      <th scope="row">{{i + 1}}</th>
+                      <td>wcs.wcCode</td>
+                      <td>wcs.wcStatus</td>
                     </tr>
                   </tbody>
 

@@ -1,3 +1,5 @@
+import { User } from "./User";
+
 export class Staff {
     id ? : number;
     name ? : string;
@@ -6,4 +8,5 @@ export class Staff {
     username ? : string;
     contact ? : string;
     email ? : string;
+    user ? : User
 }
