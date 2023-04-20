@@ -16,10 +16,16 @@
 
                   <form>
                     <div class="mb-3 mt-4">
-                      <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="From">
+                      <!-- <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="From"> -->
+                      <select class="form-select" aria-label="Default select example" *ngFor="let flight of flights">
+                        <option selected>{{flight.sStNumber}}</option>
+                      </select>
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="To">
+                        <!-- <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="To"> -->
+                        <select class="form-select" aria-label="Default select example" *ngFor="let flight of flights">
+                          <option selected>{{flight.dStNumber}}</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <input type="text"onfocus="(this.type='date')"id="date"  class="form-control date-picker hasDatepick" id="exampleInputText" aria-describedby="textHelp" placeholder="Start">
