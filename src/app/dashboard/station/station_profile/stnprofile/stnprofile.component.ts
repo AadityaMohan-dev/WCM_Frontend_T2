@@ -18,6 +18,7 @@ export class StnprofileComponent implements OnInit{
       next : (data) => {
         console.log(data);
         this.station=data;
+        this.stationService.stationCode$.next(this.station.name);
       },
       error : (err) => {
         console.log(err);

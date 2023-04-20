@@ -12,6 +12,7 @@ export class StationComponent implements OnInit{
   constructor(private stationservice : StationService){}
   staffs : Staff[];
   wcs : WheelChair[];
+  stationName : string;
   ngOnInit(): void {
     this.stationservice.getStationStaff(localStorage.getItem("token")).subscribe({
       next : (data) =>{
@@ -32,6 +33,13 @@ export class StationComponent implements OnInit{
         console.log(err);
       }
     });
+
+    this.stationservice.stationCode$.subscribe({
+      next : (data) => {
+        this.stationName = data;
+        
+      }
+    })
   
   }
 

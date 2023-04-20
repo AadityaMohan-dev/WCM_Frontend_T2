@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Station } from '../models/station';
 import { Staff } from '../models/staff';
 import { WheelChair } from '../models/wheelchair';
@@ -9,6 +9,8 @@ import { WheelChair } from '../models/wheelchair';
   providedIn: 'root'
 })
 export class StationService {
+
+  stationCode$ = new Subject<string>();
 
   constructor(private http : HttpClient) { }
 
