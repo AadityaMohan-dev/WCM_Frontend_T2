@@ -11,7 +11,7 @@
                 <h1>Payment</h1>
                 <!-- credit card info-->
                 <div id="credit-card" class="tab-pane fade show active pt-3">
-                    <form [formGroup]="loginForm">
+                    <form [formGroup]="loginForm" (submit)="submit()">
         
                         <div class="form-group"> <label for="username">
                                 <h6>Name</h6>
@@ -69,7 +69,7 @@
                         <div class="form-group"> <label for="cardNumber">
                                 <h6>Card number</h6>
                             </label>
-                            <div class="input-group"> <input type="text" name="cardNumber" placeholder="Valid card number"
+                            <div class="input-group"> <input type="text" formControlName="cardNumber" name="cardNumber" placeholder="Valid card number"
                                     class="form-control " required>
         
                                 <div class="alert alert-danger mb-3" role="alert"
@@ -102,7 +102,7 @@
                         <div>
                             <h2>Rs.6,999</h2>
                         </div>
-                        <div class="btn">Confirm Payment</div>
+                        <button type="submit" class="btn">Confirm Payment</button>
                         
                     </form>
                 </div>

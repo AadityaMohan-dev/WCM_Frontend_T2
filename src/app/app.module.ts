@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AirprofileComponent } from './dashboard/airline/airline_profile/airprofile/airprofile.component';
 import { StnprofileComponent } from './dashboard/station/station_profile/stnprofile/stnprofile.component';
+import { AddstationstaffComponent } from './dashboard/station/addstationstaff/addstationstaff.component';
+import { AddstationwheelchairComponent } from './dashboard/station/addstationwheelchair/addstationwheelchair.component';
 
 
 
@@ -37,6 +39,8 @@ import { StnprofileComponent } from './dashboard/station/station_profile/stnprof
     AirlineComponent,
     AirprofileComponent,
     StnprofileComponent,
+    AddstationstaffComponent,
+    AddstationwheelchairComponent,
 
   ],
   imports: [

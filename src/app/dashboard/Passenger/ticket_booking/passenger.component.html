@@ -9,31 +9,43 @@
         </div>
 
         <div class="col-md-5">
-            <div class="card mt-5" style="width: 22rem;">
+            <div class="card mt-4" style="width: 22rem;">
                 <div class="card-body">
                   <!-- Ticket Booking -->
                   <h4>Ticket Booking</h4>
 
-                  <form>
-                    <div class="mb-3 mt-4">
+                  <form [formGroup]="contactForm" (ngSubmit)="submit()">
+                    <div class="mb-3">
                       <!-- <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="From"> -->
-                      <select class="form-select" aria-label="Default select example" *ngFor="let flight of flights">
-                        <option selected>{{flight.sStNumber}}</option>
+                      <label>From</label>
+                      <select class="form-select"  formControlName="from" aria-label="Default select example" (change)="onFlightSelect($event)">
+                        <option *ngFor="let flight of flights" [value]="flight.id">{{flight.sStNumber}}</option>
                       </select>
                     </div>
                     <div class="mb-3">
                         <!-- <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="To"> -->
-                        <select class="form-select" aria-label="Default select example" *ngFor="let flight of flights">
-                          <option selected>{{flight.dStNumber}}</option>
+                        <label>To</label>
+                        <select class="form-select" aria-label="Default select example" formControlName="to">
+                          <option  *ngFor="let flight of flights" [ngValue]="flight.dStNumber">{{flight.dStNumber}}</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <input type="text"onfocus="(this.type='date')"id="date"  class="form-control date-picker hasDatepick" id="exampleInputText" aria-describedby="textHelp" placeholder="Start">
+                        <!-- <input type="text"onfocus="(this.type='date')"id="date"  class="form-control date-picker hasDatepick" id="exampleInputText" aria-describedby="textHelp" placeholder="Start"> -->
+                        <label>Start Date</label>
+                        <select class="form-select" aria-label="Default select example" formControlName="start">
+                          <option *ngFor="let flight of flights" [ngValue]="flight.fromDateTime">{{flight.fromDateTime}}</option>
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <input type="text"onfocus="(this.type='date')"id="date"  class="form-control date-picker hasDatepick" id="exampleInputText" aria-describedby="textHelp" placeholder="Return">
+                        <!-- <input type="text"onfocus="(this.type='date')"id="date"  class="form-control date-picker hasDatepick" id="exampleInputText" aria-describedby="textHelp" placeholder="Return"> -->
+                        <label>End Date</label>
+                        <select class="form-select" aria-label="Default select example" formControlName="completed">
+                          <option selected disabled>Completed</option>
+                          <option *ngFor="let flight of flights" [ngValue]="flight.toDateTime">{{flight.toDateTime}}</option>
+                        </select>
                     </div>
                     <div class="mb-3">
+                      <label>Flight Type</label>
                         <!-- Flight Type -->
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Economy</option>
@@ -43,15 +55,15 @@
                           </select>
                     </div>
                     <div class="mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected disabled>Special Service Request</option>
-                            <option value="1">Wheel Chair</option>
+                      <label>Special Services</label>
+                        <select class="form-select" aria-label="Default select example" formControlName="ssr">
+                            <option value="1" [ngValue]="true">Wheel Chair</option>
                             <option value="2" disabled>Special Food</option>
                             <option value="3" disabled>Other</option>
                           </select>
                     </div>
                     
-                    <button type="submit" class="btn">Submit</button>
+                    <button type="submit" class="btn" [routerLink]="['/payment', flightId]">Submit</button>
                   </form>
 
                   
