@@ -6,7 +6,9 @@ import { PassengerComponent } from './dashboard/Passenger/ticket_booking/passeng
 import { StationComponent } from './dashboard/station/station/station.component';
 import { PaymentComponent } from './dashboard/Passenger/payment/payment.component';
 import { AirlineComponent } from './dashboard/airline/airline.component';
-import { AddstationstaffComponent } from './dashboard/station/addstationstaff/addstationstaff.component';
+import { AddStaffComponent } from './dashboard/add-staff/add-staff.component';
+import { AddWheelchairComponent } from './dashboard/add-wheelchair/add-wheelchair.component';
+
 
 
 const routes: Routes = [
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: 'payment/:id', component: PaymentComponent },
   { path: 'station', component: StationComponent },
   {path: 'airline', component:AirlineComponent},
-  {path : 'add/station/staff',component : AddstationstaffComponent}
+  {path : 'add/staff',component : AddStaffComponent},
+  {path : 'add/wc', component : AddWheelchairComponent}
+  
 ];
 
 @NgModule({
