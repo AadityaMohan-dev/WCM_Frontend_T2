@@ -19,9 +19,9 @@ export class UserService {
   }
 
   //post api
-  public staffSignup(addstaff : any, staffcode : string) : Observable<any>{
+  public staffSignup(addstaff : addStaff, staffcode : string) : Observable<any>{
     console.log();
-    return this.http.post<any>('http://localhost:8786/api'+ '/add/staff',staffcode)
+    return this.http.post<any>('http://localhost:8786/api'+ `/add/staff/${staffcode}`,addstaff)
   }
 
 }
