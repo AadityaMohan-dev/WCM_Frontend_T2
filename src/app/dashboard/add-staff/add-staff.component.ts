@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { LoginComponent } from 'src/app/auth/LogIn/login/login.component';
 import { addStaff } from 'src/app/models/addstaff';
 import { UserService } from 'src/app/service/user.service';
@@ -18,8 +18,13 @@ export class AddStaffComponent implements OnInit{
   constructor(private signup : UserService){}
   ngOnInit(): void {
     this.signupForm = new FormGroup({
-      // email: new FormControl('', [Validators.required, Validators.email]),
-      // password: new FormControl('', [Validators.required, Validators.minLength(4)])
+      name : new FormControl,
+      username : new FormControl,
+      contact : new FormControl,
+      email : new FormControl,
+      password : new FormControl,
+      code : new FormControl
+
     });
     
   }
