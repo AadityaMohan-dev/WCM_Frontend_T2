@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddWheelchairComponent } from './add-wheelchair.component';
+import { AddWcComponent } from './add-wc.component';
 
-describe('AddWheelchairComponent', () => {
-  let component: AddWheelchairComponent;
-  let fixture: ComponentFixture<AddWheelchairComponent>;
+describe('AddWcComponent', () => {
+  let component: AddWcComponent;
+  let fixture: ComponentFixture<AddWcComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddWheelchairComponent ]
+      declarations: [ AddWcComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AddWheelchairComponent);
+    fixture = TestBed.createComponent(AddWcComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

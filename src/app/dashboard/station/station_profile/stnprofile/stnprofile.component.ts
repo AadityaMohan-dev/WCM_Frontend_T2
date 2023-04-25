@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Station } from 'src/app/models/station';
 import { StationService } from 'src/app/service/station.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-stnprofile',
@@ -11,9 +12,12 @@ import { StationService } from 'src/app/service/station.service';
 export class StnprofileComponent implements OnInit{
   
   station : Station;
+  userId: number;
   profileImg = "../assets/station profile.png";
-  constructor(private stationService : StationService,private router : Router){}
+  constructor(private stationService : StationService, private userService: UserService, private router : Router){}
   ngOnInit(): void {
+
+
     this.stationService.getStationByUserName(localStorage.getItem('token')).subscribe({
       next : (data) => {
         console.log(data);

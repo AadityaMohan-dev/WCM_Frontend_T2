@@ -6,8 +6,9 @@ import { PassengerComponent } from './dashboard/Passenger/ticket_booking/passeng
 import { StationComponent } from './dashboard/station/station/station.component';
 import { PaymentComponent } from './dashboard/Passenger/payment/payment.component';
 import { AirlineComponent } from './dashboard/airline/airline.component';
-import { AddStaffComponent } from './dashboard/add-staff/add-staff.component';
-import { AddWheelchairComponent } from './dashboard/add-wheelchair/add-wheelchair.component';
+import { AddStaffComponent } from './dashboard/station/add-staff/add-staff.component';
+import { AddWcComponent } from './dashboard/station/add-wc/add-wc.component';
+
 
 
 
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'station', component: StationComponent },
   {path: 'airline', component:AirlineComponent},
   {path : 'add/staff',component : AddStaffComponent},
-  {path : 'add/wc', component : AddWheelchairComponent}
+  {path : 'add/wc', component : AddWcComponent}
   
 ];
 

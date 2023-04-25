@@ -19,12 +19,15 @@
 
                 <h3>Location :</h3>
                 <p>{{station.location}}</p>
+                <p>{{userId}}</p>
                 
                 <!-- <h3>Station Type :</h3>
                 <p>{{station.type}}</p> -->
                 
             </div>
         </div>
+        <div class="btn mb-2" routerLink="/add/wc">Add Wheelchair</div>
+         <div class="btn mb-2" routerLink="/add/staff">Add Staff</div>
          <div class="btn" (click)="OnLogout()">SignOut</div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { User } from '../models/User';
 import { addStaff } from '../models/addstaff';
 
@@ -19,9 +19,9 @@ export class UserService {
   }
 
   //post api
-  public staffSignup(addstaff : addStaff, staffcode : string) : Observable<any>{
+  public staffSignup(addstaff : addStaff, userId: any) : Observable<any>{
     console.log();
-    return this.http.post<any>('http://localhost:8786/api'+ `/add/staff/${staffcode}`,addstaff)
+    return this.http.post<any>('http://localhost:8786/api'+ `/staff/add/${userId}`,addstaff)
   }
 
 }

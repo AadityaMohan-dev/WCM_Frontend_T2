@@ -7,22 +7,15 @@
             <div class="card">
                 <h3>Add New Wheelchair</h3>
               <div class="card-body">
-                <form class="row g-3">
+                <form class="row g-3" [formGroup]="wcForm" (submit)="submit()">
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col">
                       <label for="inputEmail4" class="form-label">Wheelchair code</label>
-                      <input type="text" class="form-control" id="name">
-                    </div><div class="col-md-6">
+                      <input type="text" class="form-control" id="name"  formControlName="wc_code">
+                    </div><div class="col">
                         <label for="inputEmail4" class="form-label">Status</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control"  formControlName="wc_status">
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label for="inputEmail4" class="form-label">Assigned Code</label>
-                      <input type="text" class="form-control" id="code">
-                    </div>
-                    
                   </div>
                   
                   

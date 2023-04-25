@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token', token),
           localStorage.setItem('role', data.role),
           localStorage.setItem('email', data.username);
+          localStorage.setItem('userId', data.id.toString());
 
         switch (data.role) {
           case "STAFF":
