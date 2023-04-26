@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Station } from 'src/app/models/station';
 import { StationService } from 'src/app/service/station.service';
 import { UserService } from 'src/app/service/user.service';
@@ -12,9 +13,12 @@ import { UserService } from 'src/app/service/user.service';
 export class StnprofileComponent implements OnInit{
   
   station : Station;
-  userId: number;
+  userId: ScrollSetting;
   profileImg = "../assets/station profile.png";
-  constructor(private stationService : StationService, private userService: UserService, private router : Router){}
+  constructor(private stationService : StationService,
+              private userService: UserService, 
+              private router : Router,
+              private toaster : ToastrService){}
   ngOnInit(): void {
 
 
@@ -31,8 +35,20 @@ export class StnprofileComponent implements OnInit{
   }
   OnLogout(){
     localStorage.clear();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/login']); 
     }
+
+  onClick(){
+    this.stationService.addWheelchair(localStorage.getItem('userId')).subscribe({
+      next : (data) => {
+        console.log(data);
+        this.toaster.success(data.message);
+      },
+      error : (err) => {
+        console.log(err);
+      }
+    });
+  }
   
 
 }

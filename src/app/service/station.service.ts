@@ -28,4 +28,8 @@ export class StationService {
     let header = {'Authorization' : 'Basic ' + token};
     return this.http.get<WheelChair[]>('http://localhost:8786/api/wheelChair/get/all', {headers : header});
   }
+
+  addWheelchair(userId: string) : Observable<any> {
+    return this.http.post<any>('http://localhost:8786/api/wheelChair'+ `/add/${userId}`, {});
+  }
 }

@@ -21,7 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AirprofileComponent } from './dashboard/airline/airline_profile/airprofile/airprofile.component';
 import { StnprofileComponent } from './dashboard/station/station_profile/stnprofile/stnprofile.component';
 import { AddStaffComponent } from './dashboard/station/add-staff/add-staff.component';
-import { AddWcComponent } from './dashboard/station/add-wc/add-wc.component';
+
 
 
 
@@ -40,7 +40,6 @@ import { AddWcComponent } from './dashboard/station/add-wc/add-wc.component';
     AirprofileComponent,
     StnprofileComponent,
     AddStaffComponent,
-    AddWcComponent,
 
   ],
   imports: [

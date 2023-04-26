@@ -12,13 +12,13 @@
         <div class="count">
             <div class="row">
                 <h3>Name :</h3>
-                <p>{{station.name}}</p>
+                <p>{{station?.name}}</p>
 
                 <!-- <h3>Station Number :</h3>
                 <p>{{station.Stnumber}}</p> -->
 
                 <h3>Location :</h3>
-                <p>{{station.location}}</p>
+                <p>{{station?.location}}</p>
                 <p>{{userId}}</p>
                 
                 <!-- <h3>Station Type :</h3>
@@ -26,7 +26,7 @@
                 
             </div>
         </div>
-        <div class="btn mb-2" routerLink="/add/wc">Add Wheelchair</div>
+        <div class="btn mb-2" (click)="onClick()">Add Wheelchair</div>
          <div class="btn mb-2" routerLink="/add/staff">Add Staff</div>
          <div class="btn" (click)="OnLogout()">SignOut</div>
     </div>
