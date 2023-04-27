@@ -11,6 +11,7 @@ import { StaffService } from 'src/app/service/staff.service';
 export class ProfileComponent implements OnInit{
 
   staff: Staff;
+  staffStatus : string;
 
   profileImg = "../assets/rmxkvbdtrp5v0rcosrev.png";
 
@@ -19,6 +20,13 @@ export class ProfileComponent implements OnInit{
   }
 
   ngOnInit(): void {
+
+    this.staffService.staffStatus$.subscribe({
+      next : (data) => {
+        this.staffStatus = data;
+      }
+    })
+
     this.staffService.getStaffByUsername(localStorage.getItem('token')).subscribe({
       next : (data) => {
         console.log(data);
