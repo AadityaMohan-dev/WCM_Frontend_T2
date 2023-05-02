@@ -51,3 +51,7 @@ h5{
     font-family: 'Times New Roman', Times, serif;
     margin-left: 25%;
 }
+.navbar{
+    box-shadow: 10px 10px 10px rgb(106, 114, 150);
+}
+
