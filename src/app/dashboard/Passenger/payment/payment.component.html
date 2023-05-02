@@ -11,7 +11,7 @@
                 <h1>Payment</h1>
                 <!-- credit card info-->
                 <div id="credit-card" class="tab-pane fade show active pt-3">
-                    <form [formGroup]="loginForm" (submit)="submit()">
+                    <form [formGroup]="loginForm" (ngSubmit)="Submit()">
         
                         <div class="form-group"> <label for="username">
                                 <h6>Name</h6>
@@ -102,7 +102,7 @@
                         <div>
                             <h2>Rs.6,999</h2>
                         </div>
-                        <button type="submit" class="btn" routerLink="/">Confirm Payment</button>
+                        <button type="submit" class="btn">Confirm Payment</button>
                         
                     </form>
                 </div>

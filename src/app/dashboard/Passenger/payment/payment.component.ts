@@ -36,7 +36,8 @@ export class PaymentComponent implements OnInit{
       cardNumber : new FormControl('', [Validators.required, Validators.pattern(/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g)])
     });
   }
-  submit(){
+  Submit(){
+    console.log("INSIDE FORM SUBMIT");
     this.passengerDetails = {
       name : this.loginForm.value.name,
       email : this.loginForm.value.email,
@@ -65,6 +66,8 @@ export class PaymentComponent implements OnInit{
         this.toastr.error(err.error.message);
       }
     })
+
+    this.router.navigateByUrl(`/`);
   }
 
 }

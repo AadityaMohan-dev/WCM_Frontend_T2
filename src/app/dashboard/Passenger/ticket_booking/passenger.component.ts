@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { from } from 'rxjs';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { Flight } from 'src/app/models/flight';
 import { FlightService } from 'src/app/service/flight.service';
 
@@ -17,7 +17,7 @@ export class PassengerComponent implements OnInit{
   flightId: number;
 
 
-  constructor(private flightservice : FlightService,private fb:FormBuilder){}
+  constructor(private flightservice : FlightService,private fb:FormBuilder, private router: Router){}
   ngOnInit(): void {
     this.flightservice.getFlightDetails().subscribe({
       next : (data) =>{
@@ -29,13 +29,21 @@ export class PassengerComponent implements OnInit{
       }
     });
 
-    this.contactForm = this.fb.group({
-      from : null,
-      to : null,
-      start : null,
-      completed : null,
-      ssr : null,
-    });
+    this.contactForm = new FormGroup({
+      fromStation: new FormControl(''),
+      toStation: new FormControl(),
+      start: new FormControl(),
+      completed: new FormControl(),
+      ssr: new FormControl()
+    })
+
+    // this.contactForm = this.fb.group({
+    //   from : null,
+    //   to : null,
+    //   start : null,
+    //   completed : null,
+    //   ssr : null,
+    // });
 
     
 
@@ -43,7 +51,8 @@ export class PassengerComponent implements OnInit{
   submit(){
     console.log("form submited")
     console.log(this.contactForm.value)
-    localStorage.setItem('data' , this.contactForm.value)
+    this.router.navigateByUrl(`/payment/${this.flightId}`);
+    // localStorage.setItem('data' , this.contactForm.value)
     
   }
 

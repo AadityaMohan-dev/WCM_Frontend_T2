@@ -18,14 +18,14 @@
                     <div class="mb-3">
                       <!-- <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="From"> -->
                       <label>From</label>
-                      <select class="form-select"  formControlName="from" aria-label="Default select example" (change)="onFlightSelect($event)">
+                      <select class="form-select"  formControlName="fromStation" aria-label="Default select example" (change)="onFlightSelect($event)">
                         <option *ngFor="let flight of flights" [value]="flight.id">{{flight.sStNumber}}</option>
                       </select>
                     </div>
                     <div class="mb-3">
                         <!-- <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder="To"> -->
                         <label>To</label>
-                        <select class="form-select" aria-label="Default select example" formControlName="to">
+                        <select class="form-select" aria-label="Default select example" formControlName="toStation">
                           <option  *ngFor="let flight of flights" [ngValue]="flight.dStNumber">{{flight.dStNumber}}</option>
                         </select>
                     </div>
@@ -63,7 +63,7 @@
                           </select>
                     </div>
                     
-                    <button type="submit" class="btn" [routerLink]="['/payment', flightId]">Submit</button>
+                    <button type="submit" class="btn">Submit</button>
                   </form>
 
                   
