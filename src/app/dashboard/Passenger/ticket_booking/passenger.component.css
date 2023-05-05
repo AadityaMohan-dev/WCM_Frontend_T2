@@ -1,6 +1,6 @@
 #sect1 {
     background-image: linear-gradient(to right, #F9E7FF, #DAFCFC);
-    min-height: 100vh;
+    
     overflow: hidden;
     
 }
@@ -11,7 +11,7 @@
     margin: auto;
 }
 
-.btn {
+.btn-1{
     margin-top: 4%;
     padding: 16px;
     width: 100%;
@@ -30,28 +30,31 @@
 h4{
     font-family: 'Times New Roman', Times, serif;
 }
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 5%;
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+}
 
 img{
-    height: 70vh;
-    width: auto;
+    height: 60vh;
 }
 
 h1{
     font-family: 'Times New Roman', Times, serif;
     margin-top: 8%;
-    margin-left: 25%;
+    margin-left: 10%;
 }
 
 h2{
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 25%;
+    margin-left: 10%;
 }
 
 h5{
     font-family: 'Times New Roman', Times, serif;
-    margin-left: 25%;
-}
-.navbar{
-    box-shadow: 10px 10px 10px rgb(106, 114, 150);
+    margin-left: 10%;
 }
 

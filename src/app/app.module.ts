@@ -21,6 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AirprofileComponent } from './dashboard/airline/airline_profile/airprofile/airprofile.component';
 import { StnprofileComponent } from './dashboard/station/station_profile/stnprofile/stnprofile.component';
 import { AddStaffComponent } from './dashboard/station/add-staff/add-staff.component';
+import { TicketDetailsComponent } from './dashboard/passenger/ticket-details/ticket-details.component';
 
 
 
@@ -40,6 +41,7 @@ import { AddStaffComponent } from './dashboard/station/add-staff/add-staff.compo
     AirprofileComponent,
     StnprofileComponent,
     AddStaffComponent,
+    TicketDetailsComponent,
 
   ],
   imports: [

@@ -7,6 +7,7 @@ import { StationComponent } from './dashboard/station/station/station.component'
 import { PaymentComponent } from './dashboard/Passenger/payment/payment.component';
 import { AirlineComponent } from './dashboard/airline/airline.component';
 import { AddStaffComponent } from './dashboard/station/add-staff/add-staff.component';
+import { TicketDetailsComponent } from './dashboard/passenger/ticket-details/ticket-details.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'station', component: StationComponent },
   {path: 'airline', component:AirlineComponent},
   {path : 'add/staff',component : AddStaffComponent},
+  {path : 'ticket-details', component : TicketDetailsComponent},
   
 ];
 
